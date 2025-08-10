@@ -1,0 +1,102 @@
+{
+  "tasks": [
+    {
+      "task_id": "T001",
+      "feature_id": "F5",
+      "description": "Set up Cloudflare D1 database and apply initial schema.",
+      "dependencies": [],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T002",
+      "feature_id": "F2",
+      "description": "Develop the core Agentic Search Backend logic for processing queries.",
+      "dependencies": ["T001"],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T003",
+      "feature_id": "F1, F2, F3, F5, F10",
+      "description": "Implement the API endpoints for search (POST /api/search, GET /api/search/{search_id}/status, GET /api/search/{search_id}/results).",
+      "dependencies": ["T002"],
+      "category": "API"
+    },
+    {
+      "task_id": "T004",
+      "feature_id": "F1",
+      "description": "Set up the basic UI for the Natural Language Search Interface.",
+      "dependencies": ["T003"],
+      "category": "Frontend"
+    },
+    {
+      "task_id": "T005",
+      "feature_id": "F3",
+      "description": "Implement the Results Display table view with Shadcn.",
+      "dependencies": ["T003", "T004"],
+      "category": "Frontend"
+    },
+    {
+      "task_id": "T006",
+      "feature_id": "F4",
+      "description": "Develop the Metrics View dashboard.",
+      "dependencies": ["T003"],
+      "category": "Frontend"
+    },
+    {
+      "task_id": "T007",
+      "feature_id": "F7",
+      "description": "Implement the Integrated Kanban Board feature.",
+      "dependencies": ["T001"],
+      "category": "Frontend"
+    },
+    {
+      "task_id": "T008",
+      "feature_id": "F6",
+      "description": "Develop the Personalized Landing Page / Dashboard.",
+      "dependencies": ["T001", "T007"],
+      "category": "Frontend"
+    },
+    {
+      "task_id": "T009",
+      "feature_id": "F8",
+      "description": "Implement Workflow Monitoring & Status for Deep Research.",
+      "dependencies": ["T002"],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T010",
+      "feature_id": "F9",
+      "description": "Implement Repository Health/Update Tracking (Optional Enhancement).",
+      "dependencies": ["T001"],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T011",
+      "feature_id": "F10",
+      "description": "Implement Minimal Admin Functionality (API endpoints).",
+      "dependencies": ["T001"],
+      "category": "API"
+    },
+    {
+      "task_id": "T012",
+      "feature_id": "F5",
+      "description": "Implement Persistent Storage & History for search queries.",
+      "dependencies": ["T001", "T003"],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T013",
+      "feature_id": "F4",
+      "description": "Implement Anomaly Detection logic.",
+      "dependencies": ["T002"],
+      "category": "Backend"
+    },
+    {
+      "task_id": "T014",
+      "feature_id": "F4",
+      "description": "Implement Personalized AI Recommendations with a feedback loop.",
+      "dependencies": ["T002"],
+      "category": "Backend"
+    }
+  ]
+}

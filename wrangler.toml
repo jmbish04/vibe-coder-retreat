@@ -1,0 +1,27 @@
+# Task(s): T001
+# This file is for Cloudflare Worker configuration.
+
+name = "vibe-coder-retreat"
+main = "src/api/search.ts" # Adjust as needed for routing
+compatibility_date = "2023-10-26"
+
+# D1 database bindings
+[[d1_databases]]
+binding = "DB"
+database_name = "vibe-coder-retreat-db"
+database_id = "<your-database-id>"
+
+# KV namespace bindings (if needed)
+# [[kv_namespaces]]
+# binding = "MY_KV"
+# id = "<your-kv-id>"
+
+# Queue bindings (if needed)
+# [[queues.producers]]
+# queue = "my-queue"
+# binding = "MY_QUEUE"
+
+# Durable Object bindings (if needed)
+# [[durable_objects.bindings]]
+# name = "MY_DO"
+# class_name = "MyDurableObject"
